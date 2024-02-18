@@ -52,5 +52,5 @@ Puedes instalar la versión de desarrollo de censoperu de la siguiente
 manera:
 
 ``` r
-pak::pak("PaulESantos/censoperu")
+pak::pak("PaulESantos/perucenso")
 ```

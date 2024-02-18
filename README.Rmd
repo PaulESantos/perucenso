@@ -38,6 +38,6 @@ Con el objetivo de facilitar el acceso y la manipulación de estos datos para to
 Puedes instalar la versión de desarrollo de censoperu de la siguiente manera:
 
 ``` r
-pak::pak("PaulESantos/censoperu")
+pak::pak("PaulESantos/perucenso")
 ```
 
