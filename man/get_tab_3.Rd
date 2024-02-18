@@ -23,6 +23,6 @@ presentado en el Censo Poblacional del Peru 2017.
 }
 \examples{
 \dontrun{
-df <- read_pob_vivienda("rawdata/08TOMO_01.xlsx", sheet = 3)
+df <- get_tab_3("rawdata/08TOMO_01.xlsx", sheet = 3)
 }
 }

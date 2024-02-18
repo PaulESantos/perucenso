@@ -10,7 +10,7 @@
 #' @return Un tibble ordenado con la informacion procesada.
 #' @examples
 #' \dontrun{
-#' df <- read_pob_vivienda("rawdata/08TOMO_01.xlsx", sheet = 3)
+#' df <- get_tab_3("rawdata/08TOMO_01.xlsx", sheet = 3)
 #' }
 get_tab_3 <- function(file, sheet, dep_name = NULL) {
   df <- readxl::read_excel(file, sheet = sheet, skip = 4, col_names = FALSE) |>
