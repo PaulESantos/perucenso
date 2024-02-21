@@ -54,3 +54,5 @@ manera:
 ``` r
 pak::pak("PaulESantos/perucenso")
 ```
+
+## Por que desarrollamos `perucenso`
