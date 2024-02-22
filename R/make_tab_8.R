@@ -7,9 +7,9 @@
 #' @param sheet Número de la hoja en el archivo Excel que contiene los datos.
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
 #' @return Un tibble con los datos procesados.
-#' @import readxl dplyr tidyr janitor stringr
 #' @export
-#' @examples
+#'
+
 get_tab_8 <- function(file, sheet, dep_name = NULL) {
   df <- readxl::read_xlsx(file, sheet = sheet, skip = 4, col_names = FALSE)|>
     dplyr::select(-c(2, 5)) |>

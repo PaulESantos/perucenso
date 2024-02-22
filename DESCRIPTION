@@ -1,5 +1,5 @@
 Package: perucenso
-Title: Paquete para Procesar Datos del Censo Poblacional del Perú 2017
+Title: Procesar Datos del Censo Poblacional del Perú 2017
 Version: 0.0.0.1
 Authors@R: 
     c(person(given = "Paul Efren",
@@ -13,7 +13,7 @@ Authors@R:
     person(given = "Edison Mekias",
            family = "Barrios Sallo",
            role = "aut"))
-Description: Este paquete proporciona herramientas para cargar, limpiar, analizar y visualizar los datos del Censo Poblacional del Perú del año 2017. Incluye funciones para procesar información demográfica. El paquete `perucenso` facilita el acceso y la manipulación de los datos censales, permitiendo un análisis detallado de la composición demográfica en diferentes niveles geográficos.
+Description: Proporciona herramientas para cargar, limpiar, analizar y visualizar los datos del Censo Poblacional del Perú del año 2017. Incluye funciones para procesar información demográfica. El paquete `perucenso` facilita el acceso y la manipulación de los datos censales, permitiendo un análisis detallado de la composición demográfica en diferentes niveles geográficos.
 License: MIT + file LICENSE
 Suggests: 
     knitr,
