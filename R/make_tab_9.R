@@ -1,7 +1,7 @@
-#' Procesar datos del cuadro de población censada de 5 y más años de edad por sexo y grupos de edad
+#' Procesar datos del cuadro de población censada por sexo y grupos de edad según lugar de residencia de la madre cuando usted nació
 #'
-#' Esta función lee y procesa los datos del cuadro de población censada de 5 y más años de edad por sexo y grupos de edad,
-#' según lugar de residencia permanente hace cinco años, dentro y fuera del país.
+#' Esta función lee y procesa los datos del cuadro de población censada por sexo y grupos de edad, según lugar de residencia de la madre cuando usted nació,
+#' dentro y fuera del país.
 #'
 #' @param file Ruta del archivo Excel que contiene los datos.
 #' @param sheet Número de la hoja en el archivo Excel que contiene los datos.
@@ -9,14 +9,18 @@
 #' @return Un tibble con los datos procesados.
 #' @export
 #'
+get_tab_9 <- function(file, sheet, dep_name = NULL){
 
-get_tab_8 <- function(file, sheet, dep_name = NULL) {
-  df <- readxl::read_xlsx(file, sheet = sheet, skip = 4, col_names = FALSE)|>
+  df <- readxl::read_xlsx(file,
+                          sheet = sheet,
+                          skip = 4,
+                          col_names = FALSE) |>
     dplyr::select(-c(2, 5)) |>
     purrr::set_names(c(
       "residencia",
       "Hombres",
       "Mujeres",
+      "Menores de 1 año",
       "5 a 14 años",
       "15 a 29 años",
       "30 a 44 años",
@@ -31,15 +35,18 @@ get_tab_8 <- function(file, sheet, dep_name = NULL) {
     )) |>
     tidyr::fill(departamento, .direction = "down") |>
     dplyr::relocate(departamento) |>
-    dplyr::filter(!stringr::str_detect(residencia, "^DEP|^DPT")) |>
+    dplyr::filter(!stringr::str_detect(residencia, "^DEP|^DPTO\\.|^REG")) |>
     dplyr::mutate(departamento = dplyr::case_when(
       stringr::str_detect(residencia, "^EX") ~ residencia,
       stringr::str_detect(residencia, "PROV\\.") ~ residencia,
       TRUE ~ departamento
     )) |>
+    dplyr::mutate(departamento = dplyr::if_else(dplyr::row_number() == n(),
+                                                "EXTRANJERO",
+                                                departamento)) |>
     dplyr::mutate(departamento = stringr::str_remove(departamento, "^DPTO\\.") |>
                     stringr::str_squish()) |>
-    dplyr::mutate(dplyr::across(
+    dplyr::mutate(dplyr:::across(
       .cols = hombres:x65_y_mas_anos,
       ~ dplyr::if_else(. == "-", "0", .) |> as.numeric()
     )) |>
@@ -62,7 +69,10 @@ get_tab_8 <- function(file, sheet, dep_name = NULL) {
       varname,
       "ano", "año"
     )) |>
+    dplyr::mutate(residencia = stringr::str_remove_all(residencia,
+                                                       "PROVINCIA DE|PROVINCIA|1\\/") |>
+                    stringr::str_squish()) |>
     dplyr::mutate(dep_name = {{dep_name}}) |>
     dplyr::relocate(dep_name)
-return(df)
+  return(df)
 }
