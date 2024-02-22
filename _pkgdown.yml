@@ -1,0 +1,5 @@
+url: https://paulesantos.github.io/perucenso/
+template:
+  bootstrap: 5
+  bootswatch: cerulean
+  lang: es
