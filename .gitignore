@@ -6,3 +6,4 @@
 .quarto
 docs
 altdoc/freeze.rds
+^_quarto$

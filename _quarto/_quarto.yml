@@ -1,0 +1,37 @@
+project:
+  type: website
+website:
+  title: perucenso
+  navbar:
+    search: true
+    right:
+      - icon: github
+        href: https://github.com/PaulESantos/perucenso
+        aria-label: perucenso GitHub
+  sidebar:
+    collapse-level: 1
+    contents:
+      - text: Home
+        file: index.qmd
+      - section: Reference
+        contents:
+          - text: get_tab_1
+            file: man/get_tab_1.qmd
+          - text: get_tab_10
+            file: man/get_tab_10.qmd
+          - text: get_tab_3
+            file: man/get_tab_3.qmd
+          - text: get_tab_4
+            file: man/get_tab_4.qmd
+          - text: get_tab_5
+            file: man/get_tab_5.qmd
+          - text: get_tab_7
+            file: man/get_tab_7.qmd
+          - text: get_tab_8
+            file: man/get_tab_8.qmd
+          - text: get_tab_9
+            file: man/get_tab_9.qmd
+      - text: License
+        file: LICENSE.md
+      - text: Citation
+        file: CITATION.md
