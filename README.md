@@ -4,7 +4,7 @@
 
 # perucenso
 
-## <a href='https://github.com/PaulESantos/perucenso'><img src='man/figures/censo_2017.jpg' align="right" height="350" width="230" /></a>
+## <a href='https://github.com/PaulESantos/perucenso'><img src='man/figures/censo_2017.jpg' align="right" height="320" width="230" /></a>
 
 <!-- badges: start -->
 
@@ -48,11 +48,9 @@ demográfica y social del Perú.
 
 ## Instalación
 
-Puedes instalar la versión de desarrollo de censoperu de la siguiente
-manera:
+Puedes instalar la versión de desarrollo de `perucenso` desde GitHub
+puedes usar la siguinte función:
 
 ``` r
 pak::pak("PaulESantos/perucenso")
 ```
-
-## Por que desarrollamos `perucenso`

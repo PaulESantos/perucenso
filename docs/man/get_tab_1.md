@@ -2,7 +2,7 @@
 
 # read_pob_tab_1
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_1.R#L24)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/#L)
 
 ## Description
 

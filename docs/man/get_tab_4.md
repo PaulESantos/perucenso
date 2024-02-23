@@ -2,7 +2,7 @@
 
 # Procesar datos del cuadro de población censada en viviendas particulares
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_4.R#L16)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/#L)
 
 ## Description
 

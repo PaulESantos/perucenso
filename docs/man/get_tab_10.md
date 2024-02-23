@@ -2,8 +2,6 @@
 
 # Obtener datos del cuadro de población censada por alguna dificultad o limitación permanente
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_10.R#L12)
-
 ## Description
 
 Esta función lee y procesa los datos del cuadro de población censada por

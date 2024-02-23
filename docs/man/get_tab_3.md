@@ -2,7 +2,7 @@
 
 # Ordenar datos del cuadro de poblacion censada en viviendas particulares
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_3.R#L15)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/#L)
 
 ## Description
 

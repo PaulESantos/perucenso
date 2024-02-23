@@ -12,9 +12,8 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-
 # perucenso
-## <a href='https://github.com/PaulESantos/perucenso'><img src='man/figures/censo_2017.jpg' align="right" height="350" width="230" /></a>
+## <a href='https://github.com/PaulESantos/perucenso'><img src='man/figures/censo_2017.jpg' align="right" height="320" width="230" /></a>
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/perucenso)](https://CRAN.R-project.org/package=perucenso)
@@ -34,9 +33,8 @@ Con el objetivo de facilitar el acceso y la manipulación de estos datos para to
 
 ## Instalación
 
-Puedes instalar la versión de desarrollo de censoperu de la siguiente manera:
+Puedes instalar la versión de desarrollo de `perucenso` desde GitHub puedes usar la siguinte función:
 
 ``` r
 pak::pak("PaulESantos/perucenso")
 ```
-## Por que desarrollamos `perucenso`
