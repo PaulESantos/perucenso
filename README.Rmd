@@ -38,3 +38,12 @@ Puedes instalar la versión de desarrollo de `perucenso` desde GitHub puedes usa
 ``` r
 pak::pak("PaulESantos/perucenso")
 ```
+
+## Citación
+
+Para citar `perucenso` 
+
+```{r echo=FALSE}
+citation("perucenso")
+```
+
