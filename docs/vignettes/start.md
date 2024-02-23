@@ -15,7 +15,7 @@ economía, entre otras, a diferentes niveles geográficos. Su facilidad
 para comparar datos entre distintas unidades geográficas y para crear
 visualizaciones complejas.
 
-<img src="../../man/figures/censobr.png" width="636" />
+<img src="images/censobr.png" width="636" />
 
 1.  [tidycensus](https://github.com/walkerke/tidycensus)
 
@@ -29,7 +29,7 @@ lo hacen destacar. Además, su integración con otras herramientas de
 familiaridad. Sin embargo, la limitación en la cobertura de datos y la
 complejidad de la API del Censo son aspectos a considerar.
 
-<img src="../../man/figures/tidycensus.png" width="634" />
+<img src="images/tidycensus.png" width="634" />
 
 1.  [censo2017](https://github.com/ropensci/censo2017/)
 

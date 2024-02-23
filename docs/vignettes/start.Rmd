@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 El paquete `censobr` proporsiona una solución integral para el acceso, descarga y análisis de datos del **Censo Demográfico de Brasil**. Este tienen como base la plataforma de `Arrow` y utilizando funciones compatibles con `dplyr`, ha demostrado eficiencia en el manejo de grandes conjuntos de datos censales. Sus capacidades permiten el análisis de variables clave como población, vivienda, educación, economía, entre otras, a diferentes niveles geográficos. Su facilidad para comparar datos entre distintas unidades geográficas y para crear visualizaciones complejas.
 
 ```{r echo=FALSE, fig.width=6}
-knitr::include_graphics("E:/perucenso/man/figures/censobr.png", dpi = 150)
+knitr::include_graphics("images/censobr.png", dpi = 150)
 ```
 
 2. [tidycensus](https://github.com/walkerke/tidycensus)
@@ -30,7 +30,7 @@ Es una herramienta eficiente para acceder y analizar datos del **Censo de los Es
 
 
 ```{r echo=FALSE, fig.width=6}
-knitr::include_graphics("E:/perucenso/man/figures/tidycensus.png", dpi = 150)
+knitr::include_graphics("images/tidycensus.png", dpi = 150)
 ```
 
 3. [censo2017](https://github.com/ropensci/censo2017/)
