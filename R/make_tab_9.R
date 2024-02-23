@@ -46,7 +46,7 @@ get_tab_9 <- function(file, sheet, dep_name = NULL){
                                                 departamento)) |>
     dplyr::mutate(departamento = stringr::str_remove(departamento, "^DPTO\\.") |>
                     stringr::str_squish()) |>
-    dplyr::mutate(dplyr:::across(
+    dplyr::mutate(dplyr::across(
       .cols = hombres:x65_y_mas_anos,
       ~ dplyr::if_else(. == "-", "0", .) |> as.numeric()
     )) |>
