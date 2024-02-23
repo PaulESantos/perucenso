@@ -57,24 +57,114 @@ encuentran datos relacionados con la población, tales como edad, género
 
 ### Variables de poblacion
 
-Aquí está la nueva tabla con las columnas solicitadas: | Variable |
-Grupo | Tipo | |—————————————————|—————-|———-| | Población | | numérica
-| | P: Relación de parentesco con el jefe del hogar | | numérica | | P:
-Sexo | SEXO | numérica | | P: Edad en años | EDAD | numérica | | P:
-Población afiliada: al SIS | SEGURO | numérica | | P: Población
-afiliada: a EsSalud | SEGURO | numérica | | P: Población afiliada: a
-seguro de fuerzas arm.. | SEGURO | numérica | | P: Población afiliada: a
-seguro privado de salud | SEGURO | numérica | | P: Población afiliada: a
-otro seguro | SEGURO | numérica | | P: Población afiliada: a ningún
-seguro | SEGURO | numérica | | P: Población con discapacidad: Ver |
-DISCAPACIDAD | numérica | | P: Población con discapacidad: Oír |
-DISCAPACIDAD | numérica | | P: Población con discapacidad: Hablar |
-DISCAPACIDAD | numérica | | P: Población con discapacidad: Moverse o
-camin.. | DISCAPACIDAD | numérica | | P: Población con discapacidad:
-Entender o apr.. | DISCAPACIDAD | numérica | | P: Población con
-discapacidad: Relacionarse c.. | DISCAPACIDAD | numérica | | P:
-Población con discapacidad: Ninguna | DISCAPACIDAD | numérica | | P:
-Tipo de documento nacional de identidad | IDENTIDAD | numérica |
+Aquí está la nueva tabla con las columnas solicitadas:
+
+<table>
+<colgroup>
+<col style="width: 66%" />
+<col style="width: 20%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Grupo</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Población</td>
+<td></td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Relación de parentesco con el jefe del hogar</td>
+<td></td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Sexo</td>
+<td>SEXO</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Edad en años</td>
+<td>EDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Población afiliada: al SIS</td>
+<td>SEGURO</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Población afiliada: a EsSalud</td>
+<td>SEGURO</td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Población afiliada: a seguro de fuerzas arm..</td>
+<td>SEGURO</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Población afiliada: a seguro privado de salud</td>
+<td>SEGURO</td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Población afiliada: a otro seguro</td>
+<td>SEGURO</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Población afiliada: a ningún seguro</td>
+<td>SEGURO</td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Población con discapacidad: Ver</td>
+<td>DISCAPACIDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Población con discapacidad: Oír</td>
+<td>DISCAPACIDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Población con discapacidad: Hablar</td>
+<td>DISCAPACIDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Población con discapacidad: Moverse o camin..</td>
+<td>DISCAPACIDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Población con discapacidad: Entender o apr..</td>
+<td>DISCAPACIDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Población con discapacidad: Relacionarse c..</td>
+<td>DISCAPACIDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="odd">
+<td>P: Población con discapacidad: Ninguna</td>
+<td>DISCAPACIDAD</td>
+<td>numérica</td>
+</tr>
+<tr class="even">
+<td>P: Tipo de documento nacional de identidad</td>
+<td>IDENTIDAD</td>
+<td>numérica</td>
+</tr>
+</tbody>
+</table>
 
 ### Gestión:
 
@@ -111,23 +201,24 @@ Tidy Data es una manera estándar de mapear el significado de un conjunto
 de datos, lo que permite una fácil interpretación y análisis. En los
 datos ordenados:
 
-1.  **Cada variable forma una columna**: Esto significa que cada
-    atributo o característica que se está midiendo tendrá su propia
-    columna en el conjunto de datos, lo que facilita el análisis
-    sistemático.
+> 1.  **Cada variable forma una columna**: Esto significa que cada
+>     atributo o característica que se está midiendo tendrá su propia
+>     columna en el conjunto de datos, lo que facilita el análisis
+>     sistemático.
 
-2.  **Cada observación forma una fila**: Cada instancia u observación
-    registrada estará representada por una sola fila en el conjunto de
-    datos, garantizando que los puntos de datos estén organizados de
-    manera sistemática.
+> 1.  **Cada observación forma una fila**: Cada instancia u observación
+>     registrada estará representada por una sola fila en el conjunto de
+>     datos, garantizando que los puntos de datos estén organizados de
+>     manera sistemática.
 
-3.  **Cada unidad de observación ocupa una celda **: El conjunto de
-    datos se estructurará de manera que cada tipo distinto de
-    observación se almacene en su propia tabla, simplificando el proceso
-    de extracción de información relevante.
+> 1.  **Cada unidad de observación ocupa una celda **: El conjunto de
+>     datos se estructurará de manera que cada tipo distinto de
+>     observación se almacene en su propia tabla, simplificando el
+>     proceso de extracción de información relevante.
 
 <figure>
-<img src="images/tidydata.jpg" alt="by @allison_horst" />
+<img src="images/tidydata.jpg" style="width:80.0%"
+alt="by @allison_horst" />
 <figcaption aria-hidden="true">by <span class="citation"
 data-cites="allison_horst">@allison_horst</span></figcaption>
 </figure>
@@ -155,3 +246,20 @@ get_tab_10("rawdata/08TOMO_02.xlsx",
 # ℹ 15,565 more rows
 # ℹ Use `print(n = ...)` to see more rows
 ```
+
+### Entorno computacional:
+
+-   **Lenguaje de programación:** Con el objetivo de garantizar una
+    gestión eficiente de la información, se han desarrollado una serie
+    de funciones utilizando el lenguaje de programación R, las cuales
+    han sido organizadas como un paquete bajo el nombre de `perucenso`.
+
+-   **Paquetes y librerías requeridos (Dependencias):** Para llevar a
+    cabo las tareas de procesamiento y ordenamiento de los datos, se
+    aprovecha la amplia funcionalidad de los paquetes que forman parte
+    de [tidyverse](https://github.com/tidyverse/tidyverse). Además, la
+    visualización se realiza con la ayuda del paquete
+    [sf](https://github.com/r-spatial/sf), y el acceso a la información
+    espacial del Perú se desarrolla mediante un paquete en desarrollo
+    complementario a `perucenso` llamado
+    [geoperu](https://github.com/PaulESantos/geoperu).

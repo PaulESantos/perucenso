@@ -35,6 +35,8 @@ Este recurso detalla las variables incorporadas en los datos del censo, las cual
 ### Variables de poblacion
 
 Aquí está la nueva tabla con las columnas solicitadas:
+
+
 | Variable                                          | Grupo          | Tipo     |
 |---------------------------------------------------|----------------|----------|
 | Población                                         |                | numérica |
@@ -56,7 +58,10 @@ Aquí está la nueva tabla con las columnas solicitadas:
 | P: Población con discapacidad: Ninguna            | DISCAPACIDAD   | numérica |
 | P: Tipo de documento nacional de identidad        | IDENTIDAD      | numérica |
 
+
+
 ### Gestión:
+
 Los datos son presentados a través de la plataforma oficial del Instituto Nacional de Estadística e Informática [INEI](https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/). En esta plataforma, se pueden encontrar los resultados definitivos del censo, ordenados para cada uno de lso departamentos, presentando un documento en formato pdf y un archivo en formato excel con los datos. Los usuarios pueden explorar y descargar estos datos para su análisis y uso posterior.
 
 ![](images/res_def.png)
@@ -73,14 +78,14 @@ El proceso de ordenamiento de los datos presentados en estas tablas conlleva num
 
 La organización final de los datos se ajustará a los principios de datos ordenados (tidy data), tal como se describe en la publicación ~Tidy Data~ [Wickham, H. .2014](https://vita.had.co.nz/papers/tidy-data.pdf). Tidy Data es una manera estándar de mapear el significado de un conjunto de datos, lo que permite una fácil interpretación y análisis. En los datos ordenados:
 
-1. **Cada variable forma una columna**: Esto significa que cada atributo o característica que se está midiendo tendrá su propia columna en el conjunto de datos, lo que facilita el análisis sistemático.
+> 1. **Cada variable forma una columna**: Esto significa que cada atributo o característica que se está midiendo tendrá su propia columna en el conjunto de datos, lo que facilita el análisis sistemático.
 
-2. **Cada observación forma una fila**: Cada instancia u observación registrada estará representada por una sola fila en el conjunto de datos, garantizando que los puntos de datos estén organizados de manera sistemática.
+> 2. **Cada observación forma una fila**: Cada instancia u observación registrada estará representada por una sola fila en el conjunto de datos, garantizando que los puntos de datos estén organizados de manera sistemática.
 
-3. **Cada unidad de observación ocupa una celda **: El conjunto de datos se estructurará de manera que cada tipo distinto de observación se almacene en su propia tabla, simplificando el proceso de extracción de información relevante.
+> 3. **Cada unidad de observación ocupa una celda **: El conjunto de datos se estructurará de manera que cada tipo distinto de observación se almacene en su propia tabla, simplificando el proceso de extracción de información relevante.
 
+![by @allison_horst](images/tidydata.jpg){ width=80% }
 
-![by @allison_horst](images/tidydata.jpg)
 
 
 Bajo estos lineamientos y con la ayuda de las funciones de perucenso, podemos generar tablas ordenadas como la siguiente:
@@ -107,6 +112,11 @@ get_tab_10("rawdata/08TOMO_02.xlsx",
 
 ```
 
+### Entorno computacional:
+
+- **Lenguaje de programación:** Con el objetivo de garantizar una gestión eficiente de la información, se han desarrollado una serie de funciones utilizando el lenguaje de programación R, las cuales han sido organizadas como un paquete bajo el nombre de `perucenso`.
+
+- **Paquetes y librerías requeridos (Dependencias):** Para llevar a cabo las tareas de procesamiento y ordenamiento de los datos, se aprovecha la amplia funcionalidad de los paquetes que forman parte de [tidyverse](https://github.com/tidyverse/tidyverse). Además, la visualización se realiza con la ayuda del paquete [sf](https://github.com/r-spatial/sf), y el acceso a la información espacial del Perú se desarrolla mediante un paquete en desarrollo complementario a `perucenso` llamado [geoperu](https://github.com/PaulESantos/geoperu).
 
 
 
