@@ -3,9 +3,9 @@
 ```verbatim
 To cite package ‘perucenso’ in publications use:
 
-  Santos Andrade P, Huillca Arredondo J, Barrios Sallo E (2024). _perucenso: Procesar Datos del
-  Censo Poblacional del Perú 2017_. R package version 0.0.0.1,
-  <https://paulesantos.github.io/perucenso/>.
+  Santos Andrade P, Huillca Arredondo J, Barrios Sallo E (2024).
+  _perucenso: Procesar Datos del Censo Poblacional del Perú 2017_. R
+  package version 0.0.0.1, <https://paulesantos.github.io/perucenso/>.
 
 A BibTeX entry for LaTeX users is
 
