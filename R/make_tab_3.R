@@ -6,7 +6,6 @@
 #'
 #' @param file Ruta del archivo de Excel que contiene los datos.
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @param sheet Numero de la hoja de Excel que contiene los datos del cuadro.
 #' @return Un tibble ordenado con la informacion procesada.
 #' @examples
 #' \dontrun{

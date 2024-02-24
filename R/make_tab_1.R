@@ -9,7 +9,6 @@
 #'
 #' @param file Ruta del archivo.
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @param nsheet Numero o nombre de la pagina del archivo xlsx con los datos.
 #'
 #' @description
 #' Los datos son tomados desde la plataforma del INSTITUTO NACIONAL DE ESTADÍSTICA E INFORMÁTICA - INEI

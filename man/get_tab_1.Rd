@@ -4,14 +4,12 @@
 \alias{get_tab_1}
 \title{read_pob_tab_1}
 \usage{
-get_tab_1(file, dep_name = NULL, nsheet = 1)
+get_tab_1(file, dep_name = NULL)
 }
 \arguments{
 \item{file}{Ruta del archivo.}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
-
-\item{nsheet}{Numero o nombre de la pagina del archivo xlsx con los datos.}
 }
 \value{
 Un tibble que muestra datos demográficos desglosados por:

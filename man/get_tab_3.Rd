@@ -4,12 +4,10 @@
 \alias{get_tab_3}
 \title{Ordenar datos del cuadro de poblacion censada en viviendas particulares}
 \usage{
-get_tab_3(file, sheet, dep_name = NULL)
+get_tab_3(file, dep_name = NULL)
 }
 \arguments{
 \item{file}{Ruta del archivo de Excel que contiene los datos.}
-
-\item{sheet}{Numero de la hoja de Excel que contiene los datos del cuadro.}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
 }
