@@ -5,17 +5,15 @@
 #'
 #' @param file Ruta del archivo Excel que contiene los datos.
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @param sheet Número de la hoja en el archivo Excel que contiene los datos.
 #' @return Un tibble con los datos procesados.
 #' @import readxl dplyr tidyr janitor stringr pesa
 #' @export
-#' @examples
-#' \dontrun{
-#' df <- process_identity_data("rawdata/08TOMO_01.xlsx", sheet = 5, )
-#' }
 
-get_tab_5 <- function(file, sheet, dep_name = NULL){
-  df <- readxl::read_excel(file, sheet = sheet, skip = 4, col_names = FALSE) |>
+get_tab_5 <- function(file, dep_name = NULL){
+  df <- readxl::read_excel(file,
+                           sheet = 5,
+                           skip = 4,
+                           col_names = FALSE) |>
     dplyr::select(-2) |>
     purrr::set_names(c("edad", "No_tiene_documento_alguno", "DNI",
                        "Solo_tiene_partida_de_nacimiento",

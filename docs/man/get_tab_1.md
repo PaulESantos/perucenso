@@ -2,7 +2,7 @@
 
 # read_pob_tab_1
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/#L)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_1.R#L23)
 
 ## Description
 
@@ -12,7 +12,7 @@ https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-20
 
 ## Usage
 
-<pre><code class='language-R'>get_tab_1(file, dep_name = NULL, nsheet = 1)
+<pre><code class='language-R'>get_tab_1(file, dep_name = NULL)
 </code></pre>
 
 ## Arguments
@@ -32,14 +32,6 @@ Ruta del archivo.
 </td>
 <td>
 Nombre del departamento al que pertenecen los datos.
-</td>
-</tr>
-<tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="get_tab_1_:_nsheet">nsheet</code>
-</td>
-<td>
-Numero o nombre de la pagina del archivo xlsx con los datos.
 </td>
 </tr>
 </table>

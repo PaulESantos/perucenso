@@ -2,6 +2,8 @@
 
 # Procesar datos del cuadro de población censada por sexo y grupos de edad según lugar de residencia de la madre cuando usted nació
 
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_9.R#L12)
+
 ## Description
 
 Esta función lee y procesa los datos del cuadro de población censada por

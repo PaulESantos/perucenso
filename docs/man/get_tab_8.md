@@ -2,7 +2,7 @@
 
 # Procesar datos del cuadro de población censada de 5 y más años de edad por sexo y grupos de edad
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/#L)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_8.R#L13)
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 # Ordenar datos del cuadro de poblacion censada en viviendas particulares
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/#L)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_3.R#L15)
 
 ## Description
 
@@ -12,7 +12,7 @@ EDAD", presentado en el Censo Poblacional del Peru 2017.
 
 ## Usage
 
-<pre><code class='language-R'>get_tab_3(file, sheet, dep_name = NULL)
+<pre><code class='language-R'>get_tab_3(file, dep_name = NULL)
 </code></pre>
 
 ## Arguments
@@ -24,14 +24,6 @@ EDAD", presentado en el Censo Poblacional del Peru 2017.
 </td>
 <td>
 Ruta del archivo de Excel que contiene los datos.
-</td>
-</tr>
-<tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="get_tab_3_:_sheet">sheet</code>
-</td>
-<td>
-Numero de la hoja de Excel que contiene los datos del cuadro.
 </td>
 </tr>
 <tr>

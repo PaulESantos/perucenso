@@ -4,7 +4,6 @@
 #' según lugar de residencia permanente dentro y fuera del país.
 #'
 #' @param file Ruta del archivo Excel que contiene los datos.
-#' @param sheet Numero de la hoja en el archivo Excel que contiene los datos.
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
 #' @return Un tibble con los datos procesados.
 #' @import readxl dplyr tidyr janitor stringr
@@ -13,8 +12,8 @@
 #' \dontrun{
 #' df <- get_tab_7("rawdata/08TOMO_02.xlsx", sheet = 2, skip = 4)
 #' }
-get_tab_7 <- function(file, sheet, dep_name = NULL) {
-  df <- readxl::read_xlsx(file, sheet = sheet, skip = 4, col_names = FALSE) |>
+get_tab_7 <- function(file, dep_name = NULL) {
+  df <- readxl::read_xlsx(file, sheet = 2, skip = 4, col_names = FALSE) |>
     dplyr::select(-c(2, 5)) |>
     purrr::set_names(c(
       "residencia",

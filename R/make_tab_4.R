@@ -5,7 +5,6 @@
 #'
 #' @param file Ruta del archivo Excel que contiene los datos.
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @param sheet Número de la hoja en el archivo Excel que contiene los datos.
 #' @return Un tibble con los datos procesados.
 #' @import readxl dplyr tidyr janitor stringr
 #' @export
@@ -15,7 +14,7 @@
 #' }
 get_tab_4 <- function(file, sheet, dep_name = NULL) {
    readxl::read_excel(file,
-                      sheet = sheet,
+                      sheet = 4,
                       col_names = FALSE,
                       skip = 4) |>
      dplyr::select(-2) |>
