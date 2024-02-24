@@ -21,10 +21,10 @@
 #'  edad y población.
 #' @export
 
-get_tab_1 <- function(file, dep_name = NULL, nsheet = 1) {
+get_tab_1 <- function(file, dep_name = NULL) {
 
   suppressMessages(df <- readxl::read_excel(file,
-                                            sheet = nsheet,
+                                            sheet = 1,
                                             skip = 4,
                                             col_names = FALSE) |>
                      dplyr::select(1, 6, 7, 9, 10) |>
