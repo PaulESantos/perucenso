@@ -12,8 +12,9 @@
 #' \dontrun{
 #' df <- get_tab_3("rawdata/08TOMO_01.xlsx", sheet = 3)
 #' }
-get_tab_3 <- function(file, sheet, dep_name = NULL) {
-  df <- readxl::read_excel(file, sheet = sheet, skip = 4, col_names = FALSE) |>
+#' @export
+get_tab_3 <- function(file, dep_name = NULL) {
+  df <- readxl::read_excel(file, sheet = 3, skip = 4, col_names = FALSE) |>
     dplyr::select(-2) |>
     purrr::set_names(c("tipo_vivienda", "Menores de 1 ano",
                        "de 1 a 14 anos", "de 15 a 29 anos",
