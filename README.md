@@ -16,6 +16,14 @@ status](https://www.r-pkg.org/badges/version/perucenso.png)](https://CRAN.R-proj
 coverage](https://codecov.io/gh/PaulESantos/perucenso/branch/master/graph/badge.svg)](https://app.codecov.io/gh/PaulESantos/perucenso?branch=master)
 <!-- badges: end -->
 
+> Este repositorio contiene la información del proyecto final del curso
+> de Análisis Geoespacial con R, Python e Inteligencia Artificial,
+> ofrecido por el Centro de Educación Continua de la Facultad de
+> Ingeniería Civil de la Universidad Nacional de Ingeniería.
+
+> El trabajo ha sido presentado por: Paul Efren Santos Andrade, Jose
+> Manuel Huillca Arredondo y Edison Mekias Barrios Sallo.
+
 ## Introducción
 
 El paquete `perucenso` proporciona herramientas para el procesamiento y
@@ -54,23 +62,3 @@ puedes usar la siguinte función:
 ``` r
 pak::pak("PaulESantos/perucenso")
 ```
-
-## Citación
-
-Para citar `perucenso`
-
-    #> To cite package 'perucenso' in publications use:
-    #> 
-    #>   Santos Andrade P, Huillca Arredondo J, Barrios Sallo E (2024).
-    #>   _perucenso: Procesar Datos del Censo Poblacional del Perú 2017_. R
-    #>   package version 0.0.0.1, <https://paulesantos.github.io/perucenso/>.
-    #> 
-    #> A BibTeX entry for LaTeX users is
-    #> 
-    #>   @Manual{,
-    #>     title = {perucenso: Procesar Datos del Censo Poblacional del Perú 2017},
-    #>     author = {Paul Efren {Santos Andrade} and José Manuel {Huillca Arredondo} and Edison Mekias {Barrios Sallo}},
-    #>     year = {2024},
-    #>     note = {R package version 0.0.0.1},
-    #>     url = {https://paulesantos.github.io/perucenso/},
-    #>   }
