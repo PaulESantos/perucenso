@@ -2,21 +2,24 @@
 % Please edit documentation in R/make_tab_8.R
 \name{get_tab_8}
 \alias{get_tab_8}
-\title{Procesar datos del cuadro de población censada de 5 y más años de edad por sexo y grupos de edad}
+\title{get_tab_8}
 \usage{
-get_tab_8(file, sheet, dep_name = NULL)
+get_tab_8(file, dep_name = NULL)
 }
 \arguments{
-\item{file}{Ruta del archivo Excel que contiene los datos.}
-
-\item{sheet}{Número de la hoja en el archivo Excel que contiene los datos.}
+\item{file}{Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
 }
 \value{
-Un tibble con los datos procesados.
+Un tibble con los datos ordenados en formato largo.
 }
 \description{
-Esta función lee y procesa los datos del cuadro de población censada de 5 y más años de edad por sexo y grupos de edad,
-según lugar de residencia permanente hace cinco años, dentro y fuera del país.
+Ordena los datos del Cuadro Nº 8 del Tomo II de los Resultados del Censo Nacional de 2017.
+
+Esta función permite organizar los datos del Cuadro Nº 8 del Tomo II de los
+Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
+POBLACIÓN CENSADA DE 5 Y MÁS AÑOS DE EDAD, POR SEXO Y GRUPOS DE EDAD, SEGÚN
+LUGAR DE RESIDENCIA PERMANENTE HACE CINCO AÑOS, DENTRO Y FUERA DEL PAÍS
 }

@@ -1,18 +1,22 @@
 
 
-# Procesar datos del cuadro de población censada por tenencia de documento de identidad
+# get_tab_5
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_5.R#L16)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_5.R#L18)
 
 ## Description
 
-Esta función lee y procesa los datos del cuadro de población censada por
-tenencia de algún tipo de documento de identidad, según provincia,
-distrito, área urbana y rural, grupos de edad y sexo.
+Ordena los datos del Cuadro Nº 5 del Tomo I de los Resultados del Censo
+Nacional de 2017.
+
+Esta función permite organizar los datos del Cuadro Nº 5 del Tomo I de
+los Resultados del Censo Nacional de 2017, el cual tiene el siguiente
+título: "DOCUMENTO DE IDENTIDAD, SEGÚN PROVINCIA, DISTRITO, ÁREA URBANA
+Y RURAL, GRUPOS DE EDAD Y SEXO".
 
 ## Usage
 
-<pre><code class='language-R'>get_tab_5(file, sheet, dep_name = NULL)
+<pre><code class='language-R'>get_tab_5(file, dep_name = NULL)
 </code></pre>
 
 ## Arguments
@@ -23,15 +27,9 @@ distrito, área urbana y rural, grupos de edad y sexo.
 <code id="get_tab_5_:_file">file</code>
 </td>
 <td>
-Ruta del archivo Excel que contiene los datos.
-</td>
-</tr>
-<tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="get_tab_5_:_sheet">sheet</code>
-</td>
-<td>
-Número de la hoja en el archivo Excel que contiene los datos.
+Ruta del archivo Excel del Tomo I de los datos descargados desde la
+página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 </td>
 </tr>
 <tr>
@@ -46,12 +44,4 @@ Nombre del departamento al que pertenecen los datos.
 
 ## Value
 
-Un tibble con los datos procesados.
-
-## Examples
-
-``` r
-library(perucenso)
-
-df <- process_identity_data("rawdata/08TOMO_01.xlsx", sheet = 5, )
-```
+Un tibble con los datos ordenados en formato largo.

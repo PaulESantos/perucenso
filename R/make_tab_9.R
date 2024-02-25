@@ -1,18 +1,23 @@
-#' Procesar datos del cuadro de población censada por sexo y grupos de edad según lugar de residencia de la madre cuando usted nació
+#' @title get_tab_9
 #'
-#' Esta función lee y procesa los datos del cuadro de población censada por sexo y grupos de edad, según lugar de residencia de la madre cuando usted nació,
-#' dentro y fuera del país.
+#' @description
+#' Ordena los datos del Cuadro Nº 9 del Tomo II de los Resultados del Censo Nacional de 2017.
 #'
-#' @param file Ruta del archivo Excel que contiene los datos.
-#' @param sheet Número de la hoja en el archivo Excel que contiene los datos.
+#' Esta función permite organizar los datos del Cuadro Nº 9 del Tomo II de los
+#' Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
+#' "POBLACIÓN CENSADA, POR SEXO Y GRUPOS DE EDAD, SEGÚN LUGAR DE RESIDENCIA DE LA
+#' MADRE DENTRO Y FUERA DEL PAÍS CUANDO USTED NACIÓ"
+#' @param file Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+#' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @return Un tibble con los datos procesados.
+#'
+#' @return Un tibble con los datos ordenados en formato largo.
 #' @export
 #'
-get_tab_9 <- function(file, sheet, dep_name = NULL){
+get_tab_9 <- function(file, dep_name = NULL){
 
   df <- readxl::read_xlsx(file,
-                          sheet = sheet,
+                          sheet = 4,
                           skip = 4,
                           col_names = FALSE) |>
     dplyr::select(-c(2, 5)) |>
@@ -41,7 +46,7 @@ get_tab_9 <- function(file, sheet, dep_name = NULL){
       stringr::str_detect(residencia, "PROV\\.") ~ residencia,
       TRUE ~ departamento
     )) |>
-    dplyr::mutate(departamento = dplyr::if_else(dplyr::row_number() == n(),
+    dplyr::mutate(departamento = dplyr::if_else(dplyr::row_number() == dplyr::n(),
                                                 "EXTRANJERO",
                                                 departamento)) |>
     dplyr::mutate(departamento = stringr::str_remove(departamento, "^DPTO\\.") |>

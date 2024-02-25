@@ -1,14 +1,14 @@
 
 
-# Ordenar datos del cuadro de poblacion censada en viviendas particulares
+# get_tab_3
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_3.R#L15)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_3.R#L21)
 
 ## Description
 
-Esta función procesa y ordena adecuadamente los datos obtenidos del
-cuadro "POBLACION CENSADA EN VIVIENDAS PARTICULARES, POR GRUPOS DE
-EDAD", presentado en el Censo Poblacional del Peru 2017.
+Esta función permite organizar los datos del Cuadro Nº 3 del Tomo I de
+los Resultados del Censo Nacional de 2017, el cual tiene el siguiente
+título: "POBLACION CENSADA EN VIVIENDAS PARTICULARES, POR GRUPOS DE EDAD
 
 ## Usage
 
@@ -23,7 +23,9 @@ EDAD", presentado en el Censo Poblacional del Peru 2017.
 <code id="get_tab_3_:_file">file</code>
 </td>
 <td>
-Ruta del archivo de Excel que contiene los datos.
+Ruta del archivo Excel del Tomo I de los datos descargados desde la
+página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 </td>
 </tr>
 <tr>
@@ -45,5 +47,5 @@ Un tibble ordenado con la informacion procesada.
 ``` r
 library(perucenso)
 
-df <- get_tab_3("rawdata/08TOMO_01.xlsx", sheet = 3)
+df <- get_tab_3("rawdata/08TOMO_01.xlsx", dep_name = "CUSCO")
 ```

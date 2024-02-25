@@ -2,12 +2,13 @@
 % Please edit documentation in R/make_tab_3.R
 \name{get_tab_3}
 \alias{get_tab_3}
-\title{Ordenar datos del cuadro de poblacion censada en viviendas particulares}
+\title{get_tab_3}
 \usage{
 get_tab_3(file, dep_name = NULL)
 }
 \arguments{
-\item{file}{Ruta del archivo de Excel que contiene los datos.}
+\item{file}{Ruta del archivo Excel del Tomo I de los datos descargados desde la página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
 }
@@ -15,12 +16,12 @@ get_tab_3(file, dep_name = NULL)
 Un tibble ordenado con la informacion procesada.
 }
 \description{
-Esta función procesa y ordena adecuadamente los datos obtenidos del cuadro
-"POBLACION CENSADA EN VIVIENDAS PARTICULARES, POR GRUPOS DE EDAD",
-presentado en el Censo Poblacional del Peru 2017.
+Esta función permite organizar los datos del Cuadro Nº 3 del Tomo I de los Resultados del Censo Nacional de 2017,
+el cual tiene el siguiente título: "POBLACION CENSADA EN VIVIENDAS PARTICULARES, POR GRUPOS DE EDAD
 }
 \examples{
 \dontrun{
-df <- get_tab_3("rawdata/08TOMO_01.xlsx", sheet = 3)
+df <- get_tab_3("rawdata/08TOMO_01.xlsx", dep_name = "CUSCO")
 }
+
 }

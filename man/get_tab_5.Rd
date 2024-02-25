@@ -2,26 +2,23 @@
 % Please edit documentation in R/make_tab_5.R
 \name{get_tab_5}
 \alias{get_tab_5}
-\title{Procesar datos del cuadro de población censada por tenencia de documento de identidad}
+\title{get_tab_5}
 \usage{
-get_tab_5(file, sheet, dep_name = NULL)
+get_tab_5(file, dep_name = NULL)
 }
 \arguments{
-\item{file}{Ruta del archivo Excel que contiene los datos.}
-
-\item{sheet}{Número de la hoja en el archivo Excel que contiene los datos.}
+\item{file}{Ruta del archivo Excel del Tomo I de los datos descargados desde la página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
 }
 \value{
-Un tibble con los datos procesados.
+Un tibble con los datos ordenados en formato largo.
 }
 \description{
-Esta función lee y procesa los datos del cuadro de población censada por tenencia de algún tipo de documento de identidad,
-según provincia, distrito, área urbana y rural, grupos de edad y sexo.
-}
-\examples{
-\dontrun{
-df <- process_identity_data("rawdata/08TOMO_01.xlsx", sheet = 5, )
-}
+Ordena los datos del Cuadro Nº 5 del Tomo I de los Resultados del Censo Nacional de 2017.
+
+Esta función permite organizar los datos del Cuadro Nº 5 del Tomo I de los Resultados del Censo Nacional de 2017,
+el cual tiene el siguiente título: "DOCUMENTO DE IDENTIDAD, SEGÚN PROVINCIA, DISTRITO, ÁREA URBANA Y RURAL,
+GRUPOS DE EDAD Y SEXO".
 }

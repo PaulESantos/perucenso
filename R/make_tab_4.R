@@ -1,18 +1,26 @@
-#' Procesar datos del cuadro de población censada en viviendas particulares
+#' @title get_tab_4
 #'
-#' Esta función lee y procesa los datos del cuadro de población censada en viviendas particulares,
-#' según provincia, distrito, área urbana y rural, sexo y relación de parentesco con el jefe o jefa del hogar.
+#' @description
+#' Ordena los datos del Cuadro Nº 4 del Tomo I de los Resultados del Censo Nacional de 2017.
 #'
-#' @param file Ruta del archivo Excel que contiene los datos.
+#' Esta función permite organizar los datos del Cuadro Nº 5 del Tomo I de los Resultados del Censo Nacional de 2017,
+#' el cual tiene el siguiente título: "POBLACIÓN CENSADA EN VIVIENDAS PARTICULARES,
+#' POR GRUPOS DE EDAD, SEGÚN PROVINCIA, DISTRITO, ÁREA URBANA Y RURAL, SEXO Y RELACIÓN
+#' DE PARENTESCO CON EL JEFE O JEFA DEL HOGAR".
+#'
+#' @param file Ruta del archivo Excel del Tomo I de los datos descargados desde la página del INEI
+#' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @return Un tibble con los datos procesados.
-#' @import readxl dplyr tidyr janitor stringr
-#' @export
+#'
+#' @return Un tibble con los datos ordenados en formato largo.
+#'
 #' @examples
 #' \dontrun{
-#' df <-  get_tab_4("rawdata/08TOMO_01.xlsx", sheet = 4)
+#' df <-  get_tab_4("rawdata/08TOMO_01.xlsx", dep_name = "CUSCO")
 #' }
-get_tab_4 <- function(file, sheet, dep_name = NULL) {
+#'
+#' @export
+get_tab_4 <- function(file, dep_name = NULL) {
    readxl::read_excel(file,
                       sheet = 4,
                       col_names = FALSE,

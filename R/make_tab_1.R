@@ -1,25 +1,19 @@
-#' read_pob_tab_1
-#'
-#' Lee la información del cuadro "POBLACIÓN CENSADA, POR ÁREA URBANA Y RURAL;
-#'  Y SEXO, SEGÚN PROVINCIA, DISTRITO Y EDADES SIMPLES" y genera una tabla en
-#'  formato tidy.
-#'
-#' Esta función toma como argumentos el archivo donde se encuentra el cuadro y
-#' el nombre del departamento.
-#'
-#' @param file Ruta del archivo.
-#' @param dep_name Nombre del departamento al que pertenecen los datos.
+#' @title get_tab_1
 #'
 #' @description
-#' Los datos son tomados desde la plataforma del INSTITUTO NACIONAL DE ESTADÍSTICA E INFORMÁTICA - INEI
-#' https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/
 #'
+#' Esta función permite organizar los datos del Cuadro Nº 1 del Tomo I de los Resultados del Censo Nacional de 2017,
+#' el cual tiene el siguiente título: "POBLACIÓN CENSADA, POR ÁREA URBANA Y RURAL;
+#' Y SEXO, SEGÚN PROVINCIA, DISTRITO Y EDADES SIMPLES"
 #'
-#' @return Un tibble que muestra datos demográficos desglosados por:
-#'  departamento, provincia, distrito, distribución (urbano/rural), sexo,
-#'  edad y población.
+#' @param file Ruta del archivo Excel del Tomo I de los datos descargados desde la página del INEI
+#' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
+#'
+#' @param dep_name Nombre del departamento al que pertenecen los datos.
+#'
+#' @return Un tibble con los datos ordenados en formato largo.
+#'
 #' @export
-
 get_tab_1 <- function(file, dep_name = NULL) {
 
   suppressMessages(df <- readxl::read_excel(file,

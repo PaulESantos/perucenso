@@ -1,16 +1,22 @@
-#' Ordenar datos del cuadro de poblacion censada en viviendas particulares
+#' @title get_tab_3
 #'
-#' Esta función procesa y ordena adecuadamente los datos obtenidos del cuadro
-#' "POBLACION CENSADA EN VIVIENDAS PARTICULARES, POR GRUPOS DE EDAD",
-#' presentado en el Censo Poblacional del Peru 2017.
+#' @description
 #'
-#' @param file Ruta del archivo de Excel que contiene los datos.
+#' Esta función permite organizar los datos del Cuadro Nº 3 del Tomo I de los Resultados del Censo Nacional de 2017,
+#' el cual tiene el siguiente título: "POBLACION CENSADA EN VIVIENDAS PARTICULARES, POR GRUPOS DE EDAD
+#'
+#' @param file Ruta del archivo Excel del Tomo I de los datos descargados desde la página del INEI
+#' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
+#'
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
+#'
 #' @return Un tibble ordenado con la informacion procesada.
+#'
 #' @examples
 #' \dontrun{
-#' df <- get_tab_3("rawdata/08TOMO_01.xlsx", sheet = 3)
+#' df <- get_tab_3("rawdata/08TOMO_01.xlsx", dep_name = "CUSCO")
 #' }
+#'
 #' @export
 get_tab_3 <- function(file, dep_name = NULL) {
   df <- readxl::read_excel(file, sheet = 3, skip = 4, col_names = FALSE) |>

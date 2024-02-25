@@ -2,26 +2,30 @@
 % Please edit documentation in R/make_tab_4.R
 \name{get_tab_4}
 \alias{get_tab_4}
-\title{Procesar datos del cuadro de población censada en viviendas particulares}
+\title{get_tab_4}
 \usage{
-get_tab_4(file, sheet, dep_name = NULL)
+get_tab_4(file, dep_name = NULL)
 }
 \arguments{
-\item{file}{Ruta del archivo Excel que contiene los datos.}
-
-\item{sheet}{Número de la hoja en el archivo Excel que contiene los datos.}
+\item{file}{Ruta del archivo Excel del Tomo I de los datos descargados desde la página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
 }
 \value{
-Un tibble con los datos procesados.
+Un tibble con los datos ordenados en formato largo.
 }
 \description{
-Esta función lee y procesa los datos del cuadro de población censada en viviendas particulares,
-según provincia, distrito, área urbana y rural, sexo y relación de parentesco con el jefe o jefa del hogar.
+Ordena los datos del Cuadro Nº 4 del Tomo I de los Resultados del Censo Nacional de 2017.
+
+Esta función permite organizar los datos del Cuadro Nº 5 del Tomo I de los Resultados del Censo Nacional de 2017,
+el cual tiene el siguiente título: "POBLACIÓN CENSADA EN VIVIENDAS PARTICULARES,
+POR GRUPOS DE EDAD, SEGÚN PROVINCIA, DISTRITO, ÁREA URBANA Y RURAL, SEXO Y RELACIÓN
+DE PARENTESCO CON EL JEFE O JEFA DEL HOGAR".
 }
 \examples{
 \dontrun{
-df <-  get_tab_4("rawdata/08TOMO_01.xlsx", sheet = 4)
+df <-  get_tab_4("rawdata/08TOMO_01.xlsx", dep_name = "CUSCO")
 }
+
 }

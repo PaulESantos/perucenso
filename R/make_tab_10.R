@@ -1,19 +1,25 @@
-#' Obtener datos del cuadro de población censada por alguna dificultad o limitación permanente
+#' @title get_tab_10
 #'
-#' Esta función lee y procesa los datos del cuadro de población censada por alguna dificultad o limitación permanente,
-#' según provincia, distrito, área urbana y rural, sexo y grupos de edad.
+#' @description
+#' Ordena los datos del Cuadro Nº 10 del Tomo II de los Resultados del Censo Nacional de 2017.
 #'
-#' @param file Ruta del archivo Excel que contiene los datos.
-#' @param sheet Número de la hoja en el archivo Excel que contiene los datos.
-#' @param dep_name Nombre del departamento.
-#' @return Un tibble con los datos procesados.
-#' @import readxl dplyr tidyr janitor stringr
+#' Esta función permite organizar los datos del Cuadro Nº 10 del Tomo II de los
+#' Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
+#' "POBLACIÓN CENSADA, POR ALGUNA DIFICULTAD O LIMITACIÓN PERMANENTE, SEGÚN PROVINCIA,
+#' DISTRITO, ÁREA URBANA Y RURAL, SEXO Y GRUPOS DE EDAD".
+#'
+#' @param file Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+#' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
+#' @param dep_name Nombre del departamento al que pertenecen los datos.
+#'
+#' @return Un tibble con los datos ordenados en formato largo.
 #' @export
-get_tab_10 <- function(file, sheet = 5, dep_name = NULL){
+#'
+get_tab_10 <- function(file, dep_name = NULL){
 
   suppressWarnings(
     df <- readxl::read_xlsx(file,
-                            sheet = sheet,
+                            sheet = 5,
                             skip = 4,
                             col_names = FALSE) )
   df <- df |>

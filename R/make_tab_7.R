@@ -1,17 +1,24 @@
-#' Procesar datos del cuadro de poblacion censada por sexo y grupos de edad
+#' @title get_tab_7
 #'
-#' Esta funcion lee y procesa los datos del cuadro de poblacion censada por sexo y grupos de edad,
-#' según lugar de residencia permanente dentro y fuera del país.
+#' @description
+#' Ordena los datos del Cuadro Nº 7 del Tomo II de los Resultados del Censo Nacional de 2017.
 #'
-#' @param file Ruta del archivo Excel que contiene los datos.
+#' Esta función permite organizar los datos del Cuadro Nº 7 del Tomo II de los
+#' Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
+#' "POBLACIÓN CENSADA, POR SEXO Y GRUPOS DE EDAD, SEGÚN LUGAR DE RESIDENCIA PERMANENTE
+#' DENTRO Y FUERA DEL PAÍS".
+#'
+#' @param file Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+#' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @return Un tibble con los datos procesados.
-#' @import readxl dplyr tidyr janitor stringr
-#' @export
+#'
+#' @return Un tibble con los datos ordenados en formato largo.
+#'
 #' @examples
 #' \dontrun{
-#' df <- get_tab_7("rawdata/08TOMO_02.xlsx", sheet = 2, skip = 4)
+#' df <- get_tab_7("rawdata/08TOMO_02.xlsx", dep_name = "CUSCO")
 #' }
+#' @export
 get_tab_7 <- function(file, dep_name = NULL) {
   df <- readxl::read_xlsx(file, sheet = 2, skip = 4, col_names = FALSE) |>
     dplyr::select(-c(2, 5)) |>

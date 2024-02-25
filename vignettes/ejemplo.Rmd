@@ -117,8 +117,12 @@ sf_cusco |>
   ggplot2::theme_bw()
 
 ```
+
+
 Los datos para un  provincia especifica.
-```{r fig.width=4, fig.height=4}
+
+
+```{r fig.width=6, fig.height=3}
 anta <- peru |> 
   dplyr::filter(provincia == "ANTA")
 anta_df <- cusco |> 
@@ -132,9 +136,6 @@ anta |>
   ggplot2::ggplot() +
   ggplot2::geom_sf(ggplot2::aes(fill = poblacion)) +
   ggplot2::theme_bw()
-
-  
-
 
 ```
 

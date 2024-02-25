@@ -2,21 +2,24 @@
 % Please edit documentation in R/make_tab_9.R
 \name{get_tab_9}
 \alias{get_tab_9}
-\title{Procesar datos del cuadro de población censada por sexo y grupos de edad según lugar de residencia de la madre cuando usted nació}
+\title{get_tab_9}
 \usage{
-get_tab_9(file, sheet, dep_name = NULL)
+get_tab_9(file, dep_name = NULL)
 }
 \arguments{
-\item{file}{Ruta del archivo Excel que contiene los datos.}
-
-\item{sheet}{Número de la hoja en el archivo Excel que contiene los datos.}
+\item{file}{Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
 }
 \value{
-Un tibble con los datos procesados.
+Un tibble con los datos ordenados en formato largo.
 }
 \description{
-Esta función lee y procesa los datos del cuadro de población censada por sexo y grupos de edad, según lugar de residencia de la madre cuando usted nació,
-dentro y fuera del país.
+Ordena los datos del Cuadro Nº 9 del Tomo II de los Resultados del Censo Nacional de 2017.
+
+Esta función permite organizar los datos del Cuadro Nº 9 del Tomo II de los
+Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
+"POBLACIÓN CENSADA, POR SEXO Y GRUPOS DE EDAD, SEGÚN LUGAR DE RESIDENCIA DE LA
+MADRE DENTRO Y FUERA DEL PAÍS CUANDO USTED NACIÓ"
 }

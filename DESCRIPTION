@@ -17,9 +17,14 @@ Description: Proporciona herramientas para cargar, limpiar, analizar y visualiza
 License: MIT + file LICENSE
 Suggests: 
     altdoc,
+    geoperu,
+    ggplot2,
+    httr,
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0)
+    sf,
+    testthat (>= 3.0.0),
+    tidyverse
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -33,8 +38,7 @@ Imports:
     rlang,
     stringr,
     stringr.plus,
-    tidyr,
-    pesa
+    tidyr
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)

@@ -1,18 +1,22 @@
 
 
-# Procesar datos del cuadro de población censada por sexo y grupos de edad según lugar de residencia de la madre cuando usted nació
+# get_tab_9
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_9.R#L12)
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_9.R#L17)
 
 ## Description
 
-Esta función lee y procesa los datos del cuadro de población censada por
-sexo y grupos de edad, según lugar de residencia de la madre cuando
-usted nació, dentro y fuera del país.
+Ordena los datos del Cuadro Nº 9 del Tomo II de los Resultados del Censo
+Nacional de 2017.
+
+Esta función permite organizar los datos del Cuadro Nº 9 del Tomo II de
+los Resultados del Censo Nacional de 2017, el cual tiene el siguiente
+título: "POBLACIÓN CENSADA, POR SEXO Y GRUPOS DE EDAD, SEGÚN LUGAR DE
+RESIDENCIA DE LA MADRE DENTRO Y FUERA DEL PAÍS CUANDO USTED NACIÓ"
 
 ## Usage
 
-<pre><code class='language-R'>get_tab_9(file, sheet, dep_name = NULL)
+<pre><code class='language-R'>get_tab_9(file, dep_name = NULL)
 </code></pre>
 
 ## Arguments
@@ -23,15 +27,9 @@ usted nació, dentro y fuera del país.
 <code id="get_tab_9_:_file">file</code>
 </td>
 <td>
-Ruta del archivo Excel que contiene los datos.
-</td>
-</tr>
-<tr>
-<td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="get_tab_9_:_sheet">sheet</code>
-</td>
-<td>
-Número de la hoja en el archivo Excel que contiene los datos.
+Ruta del archivo Excel del Tomo II de los datos descargados desde la
+página del INEI
+(https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 </td>
 </tr>
 <tr>
@@ -46,4 +44,4 @@ Nombre del departamento al que pertenecen los datos.
 
 ## Value
 
-Un tibble con los datos procesados.
+Un tibble con los datos ordenados en formato largo.

@@ -1,17 +1,22 @@
-#' Procesar datos del cuadro de población censada de 5 y más años de edad por sexo y grupos de edad
+#' @title get_tab_8
 #'
-#' Esta función lee y procesa los datos del cuadro de población censada de 5 y más años de edad por sexo y grupos de edad,
-#' según lugar de residencia permanente hace cinco años, dentro y fuera del país.
+#' @description
+#' Ordena los datos del Cuadro Nº 8 del Tomo II de los Resultados del Censo Nacional de 2017.
 #'
-#' @param file Ruta del archivo Excel que contiene los datos.
-#' @param sheet Número de la hoja en el archivo Excel que contiene los datos.
+#' Esta función permite organizar los datos del Cuadro Nº 8 del Tomo II de los
+#' Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
+#' POBLACIÓN CENSADA DE 5 Y MÁS AÑOS DE EDAD, POR SEXO Y GRUPOS DE EDAD, SEGÚN
+#' LUGAR DE RESIDENCIA PERMANENTE HACE CINCO AÑOS, DENTRO Y FUERA DEL PAÍS
+#'
+#' @param file Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+#' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
-#' @return Un tibble con los datos procesados.
+#'
+#' @return Un tibble con los datos ordenados en formato largo.
 #' @export
 #'
-
-get_tab_8 <- function(file, sheet, dep_name = NULL) {
-  df <- readxl::read_xlsx(file, sheet = sheet, skip = 4, col_names = FALSE)|>
+get_tab_8 <- function(file, dep_name = NULL) {
+  df <- readxl::read_xlsx(file, sheet = 3, skip = 4, col_names = FALSE)|>
     dplyr::select(-c(2, 5)) |>
     purrr::set_names(c(
       "residencia",
