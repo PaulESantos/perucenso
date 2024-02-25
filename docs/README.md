@@ -62,3 +62,18 @@ puedes usar la siguinte función:
 ``` r
 pak::pak("PaulESantos/perucenso")
 ```
+
+#### Nota
+
+-   Es importante tener en cuenta que los datos se descargan desde la
+    plataforma del
+    [INEI](https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
+    Para generar las tablas ordenadas con la ayuda de `perucenso`, no es
+    necesario modificar la estructura de los archivos Excel descargados.
+
+-   Las funciones que forman parte de `perucenso` actualmente están
+    enfocadas en el aspecto poblacional, y se accede a ellas mediante
+    `get_tab_1()`, `get_tab_2()`, …, `get_tab_10()`.
+
+-   La función `get_tab_1_salud()` es la primera función para ordenar
+    los datos relacionados con el tema de salud.

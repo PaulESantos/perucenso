@@ -2,6 +2,8 @@
 
 # get_tab_2
 
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_2.R#L18)
+
 ## Description
 
 Ordena los datos del Cuadro Nº 2 del Tomo I de los Resultados del Censo
