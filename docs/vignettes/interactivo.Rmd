@@ -23,7 +23,7 @@ A través de la visualización interactiva de estos datos en un mapa podemos exp
 
 # Lectura de datos
 
-```{r, eval=FALSE}
+```{r}
 cusco_path <- "https://raw.githubusercontent.com/PaulESantos/perugeopkg/master/inei/08TOMO_02_cusco.xlsx"
 
 # guardar el archivo de forma temporal
@@ -35,7 +35,7 @@ try( silent = TRUE,
 ```
  Se importan los datoscon la ayuda de `get_tab_3_salud()`
  
-```{r eval=FALSE}
+```{r}
 library(perucenso)
 cusco_tomo_2_salud <- perucenso::get_tab_3_salud(tomo_dos, 
                               dep_name = "CUSCO")
@@ -43,7 +43,7 @@ cusco_tomo_2_salud <- perucenso::get_tab_3_salud(tomo_dos,
 
 Ordenamiento de los datos
 
-```{r eval=FALSE}
+```{r}
 tipo_seguro <- cusco_tomo_2_salud |> 
   dplyr::group_by(provincia, distrito, tipo_seguro) |> 
   dplyr::summarise(poblacion = sum(poblacion, na.rm = TRUE)) |> 
@@ -76,7 +76,7 @@ tomo_dos_sf <- sf_cusco |>
 
 Generar un mapa interactivo dinámico
 
-```{r fig.width=7, fig.height=5, eval=FALSE}
+```{r fig.width=7, fig.height=5}
 library(leaflet)
 bins <- c(0, 5000, 1000, 15000, 2000, 25000, 30000, 35000)
 pal <- leaflet::colorBin("YlOrRd", domain = tomo_dos_sf$essalud, bins = bins)
@@ -112,6 +112,4 @@ leaflet::leaflet(tomo_dos_sf) |>
             position = "bottomright")
 
 ```
-La siguiente imagen es estática. Para visualizar el mapa dinámico, por favor, copie el código y ejecútelo en su dispositivo local.
 
-![](images/leaflet_plot.png)

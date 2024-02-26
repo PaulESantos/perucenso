@@ -26,11 +26,11 @@ try( silent = TRUE,
                  httr::write_disk(inei_file, overwrite = TRUE))
   )
 #> Response [https://raw.githubusercontent.com/PaulESantos/perugeopkg/master/inei/08TOMO_01_cusco.xlsx]
-#>   Date: 2024-02-26 02:12
+#>   Date: 2024-02-26 04:08
 #>   Status: 200
 #>   Content-Type: application/octet-stream
 #>   Size: 2.31 MB
-#> <ON DISK>  C:\Users\paule\AppData\Local\Temp\Rtmp42dfo3\data.xlsx
+#> <ON DISK>  C:\Users\paule\AppData\Local\Temp\RtmpG6cKFn\data.xlsx
 ```
 
 Los datos presentados en el archivo Excel del Tomo I de los resultados
@@ -195,7 +195,7 @@ sf_cusco |>
 #> Joining with `by = join_by(provincia)`
 ```
 
-![](vignettes/ejemplo.markdown_strict_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](ejemplo.markdown_strict_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 Los datos para un provincia especifica.
 
@@ -218,4 +218,4 @@ anta |>
 #> Joining with `by = join_by(provincia, distrito)`
 ```
 
-![](vignettes/ejemplo.markdown_strict_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](ejemplo.markdown_strict_files/figure-markdown_strict/unnamed-chunk-9-1.png)

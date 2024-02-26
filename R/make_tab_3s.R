@@ -1,7 +1,6 @@
 #' @title get_tab_3_salud
 #'
 #' @description
-#'
 #' Esta función permite organizar los datos del Cuadro Nº 3  relacionado con el tema de salud
 #' del Tomo II de los Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
 #' "POBLACIÓN CENSADA EN VIVIENDAS PARTICULARES, POR AFILIACIÓN A ALGÚN TIPO DE SEGURO DE SALUD,

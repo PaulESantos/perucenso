@@ -1,22 +1,20 @@
 
 
-# get_tab_1
+## get_tab_1
 
-[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_1.R#L17)
-
-## Description
+### Description
 
 Esta función permite organizar los datos del Cuadro Nº 1 del Tomo I de
 los Resultados del Censo Nacional de 2017, el cual tiene el siguiente
 título: "POBLACIÓN CENSADA, POR ÁREA URBANA Y RURAL; Y SEXO, SEGÚN
 PROVINCIA, DISTRITO Y EDADES SIMPLES"
 
-## Usage
+### Usage
 
 <pre><code class='language-R'>get_tab_1(file, dep_name = NULL)
 </code></pre>
 
-## Arguments
+### Arguments
 
 <table>
 <tr>
@@ -39,6 +37,6 @@ Nombre del departamento al que pertenecen los datos.
 </tr>
 </table>
 
-## Value
+### Value
 
 Un tibble con los datos ordenados en formato largo.

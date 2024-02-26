@@ -2,6 +2,8 @@
 
 # get_tab_3_salud
 
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_3s.R#L17)
+
 ## Description
 
 Esta función permite organizar los datos del Cuadro Nº 3 relacionado con
