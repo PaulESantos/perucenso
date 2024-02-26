@@ -26,11 +26,11 @@ try( silent = TRUE,
                  httr::write_disk(inei_file, overwrite = TRUE))
   )
 #> Response [https://raw.githubusercontent.com/PaulESantos/perugeopkg/master/inei/08TOMO_01_cusco.xlsx]
-#>   Date: 2024-02-25 04:57
+#>   Date: 2024-02-26 02:12
 #>   Status: 200
 #>   Content-Type: application/octet-stream
 #>   Size: 2.31 MB
-#> <ON DISK>  C:\Users\paule\AppData\Local\Temp\RtmpEBO8xr\data.xlsx
+#> <ON DISK>  C:\Users\paule\AppData\Local\Temp\Rtmp42dfo3\data.xlsx
 ```
 
 Los datos presentados en el archivo Excel del Tomo I de los resultados

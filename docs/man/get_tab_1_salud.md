@@ -2,6 +2,8 @@
 
 # get_tab_1_salud
 
+[**Source code**](https://github.com/PaulESantos/perucenso/tree/master/R/make_tab_1s.R#L16)
+
 ## Description
 
 Esta función permite organizar los datos del Cuadro Nº 1 del Tomo II de
