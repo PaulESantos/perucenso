@@ -1,31 +1,25 @@
-#' @title get_tab_10
+#' @title get_tab_3_edu
 #'
 #' @description
-#' Ordena los datos del Cuadro N 10 del Tomo II de los Resultados del Censo Nacional de 2017.
+#' Esta funcion permite organizar los datos del Cuadro 3 relacionado con el tema de educacion
+#' del Tomo VI de los Resultados del Censo Nacional de 2017, el cual tiene el siguiente titulo:
+#' "POBLACION CENSADA DE 3 Y MAS ANOS DE EDAD, POR GRUPOS DE EDAD, SEGUN PROVINCIA, DISTRITO,
+#' AREA URBANA Y RURAL, SEXO Y NIVEL EDUCATIVO ALCANZADO"
 #'
-#' Esta funcion permite organizar los datos del Cuadro N 10 del Tomo II de los
-#' Resultados del Censo Nacional de 2017, el cual tiene el siguiente titulo:
-#' "POBLACION CENSADA, POR ALGUNA DIFICULTAD O LIMITACION PERMANENTE, SEGUN PROVINCIA,
-#' DISTRITO, AREA URBANA Y RURAL, SEXO Y GRUPOS DE EDAD".
-#'
-#' @param file Ruta del archivo Excel del Tomo II de los datos descargados desde la pagina del INEI
+#' @param file Ruta del archivo Excel del Tomo VI de los datos descargados desde la pagina del INEI
 #' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
 #'
 #' @return Un tibble con los datos ordenados en formato largo.
 #' @export
-#'
-get_tab_10 <- function(file, dep_name = NULL){
-
-  suppressWarnings(
-    df <- readxl::read_xlsx(file,
-                            sheet = 5,
-                            skip = 4,
-                            col_names = FALSE) )
-  df <- df |>
+get_tab_3_edu <- function(file, dep_name = NULL){
+  df <- readxl::read_xlsx(file,
+                          sheet = 2,
+                          skip = 4,
+                          col_names = FALSE) |>
     dplyr::select(-2) |>
-    purrr::set_names(paste0("var_", 1:8)) |>
-    dplyr::filter(!stringr::str_detect(var_1, "^Nota:")) |>
+    purrr::set_names(paste0("var_", 1:9)) |>
+    dplyr::filter(!stringr::str_detect(var_1, "^Fuente:")) |>
     dplyr::mutate(distrito = dplyr::if_else(stringr::str_detect(var_1, "^DISTRITO"),
                                             var_1,
                                             NA_character_)) |>
@@ -70,7 +64,7 @@ get_tab_10 <- function(file, dep_name = NULL){
     dplyr::select(-tag) |>
     tidyr::pivot_longer(
       -c(provincia, distrito, distribucion, sexo, var_1),
-      names_to = "dificultad",
+      names_to = "rango_etareo",
       values_to = "poblacion"
     ) |>
     dplyr::mutate(poblacion = stringr::str_replace(
@@ -78,19 +72,20 @@ get_tab_10 <- function(file, dep_name = NULL){
       "-",
       NA_character_
     ) |> as.numeric()) |>
-    dplyr::mutate(dificultad = dplyr::case_when(
-      dificultad == "var_2" ~ "Ver, aun usando anteojos",
-      dificultad == "var_3" ~ "Oir, aun usando audifonos",
-      dificultad == "var_4" ~ "Hablar o comunicarse, aun usando la lengua de senas u otro",
-      dificultad == "var_5" ~ "Moverse o caminar para usar brazos y/o piernas",
-      dificultad == "var_6" ~ "Entender o aprender \\(concentrarse y recordar\\)",
-      dificultad == "var_7" ~ "Relacionarse con los demas por sus pensamientos, sentimientos, emociones o conductas",
-      dificultad == "var_8" ~ "Ninguna"
+    dplyr::mutate(rango_etareo = dplyr::case_when(
+      rango_etareo == "var_2" ~ "3 a 4",
+      rango_etareo == "var_3" ~ "5 a 9",
+      rango_etareo == "var_4" ~ "10 a 14",
+      rango_etareo == "var_5" ~ "15 a 19",
+      rango_etareo == "var_6" ~ "20 a 29",
+      rango_etareo == "var_7" ~ "30 a 39",
+      rango_etareo == "var_8" ~ "40 a 64",
+      rango_etareo == "var_9" ~ "65 a mas"
     )) |>
-    dplyr::rename(rango_etareo = var_1) |>
-    dplyr::relocate(rango_etareo, .after = "sexo") |>
+    dplyr::rename(nivel_educacion = var_1) |>
+    dplyr::relocate(nivel_educacion, .after = "rango_etareo") |>
     dplyr::relocate(distrito, .after = "provincia") |>
-    dplyr::mutate(dep_name = {{dep_name}}) |>
-    dplyr::relocate(dep_name)
+    dplyr::mutate(departamento = {{dep_name}}) |>
+    dplyr::relocate(departamento)
   return(df)
 }

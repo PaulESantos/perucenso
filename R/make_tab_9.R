@@ -1,13 +1,13 @@
 #' @title get_tab_9
 #'
 #' @description
-#' Ordena los datos del Cuadro Nº 9 del Tomo II de los Resultados del Censo Nacional de 2017.
+#' Ordena los datos del Cuadro N 9 del Tomo II de los Resultados del Censo Nacional de 2017.
 #'
-#' Esta función permite organizar los datos del Cuadro Nº 9 del Tomo II de los
+#' Esta funcion permite organizar los datos del Cuadro N 9 del Tomo II de los
 #' Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
-#' "POBLACIÓN CENSADA, POR SEXO Y GRUPOS DE EDAD, SEGÚN LUGAR DE RESIDENCIA DE LA
+#' "POBLACION CENSADA, POR SEXO Y GRUPOS DE EDAD, SEGUN LUGAR DE RESIDENCIA DE LA
 #' MADRE DENTRO Y FUERA DEL PAÍS CUANDO USTED NACIÓ"
-#' @param file Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+#' @param file Ruta del archivo Excel del Tomo II de los datos descargados desde la pagina del INEI
 #' (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
 #' @param dep_name Nombre del departamento al que pertenecen los datos.
 #'
@@ -25,12 +25,12 @@ get_tab_9 <- function(file, dep_name = NULL){
       "residencia",
       "Hombres",
       "Mujeres",
-      "Menores de 1 año",
-      "5 a 14 años",
-      "15 a 29 años",
-      "30 a 44 años",
-      "45 a 64 años",
-      "65 y más años"
+      "Menores de 1",
+      "5 a 14",
+      "15 a 29",
+      "30 a 44",
+      "45 a 64",
+      "65 y mas"
     ) |>
       janitor::make_clean_names()) |>
     dplyr::filter(!stringr::str_detect(residencia, "^1/")) |>
@@ -69,10 +69,6 @@ get_tab_9 <- function(file, dep_name = NULL){
     dplyr::mutate(dplyr::across(
       .cols = c(varname, tipo),
       ~ stringr::str_to_sentence(.)
-    )) |>
-    dplyr::mutate(varname = stringr::str_replace(
-      varname,
-      "ano", "año"
     )) |>
     dplyr::mutate(residencia = stringr::str_remove_all(residencia,
                                                        "PROVINCIA DE|PROVINCIA|1\\/") |>

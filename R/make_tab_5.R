@@ -17,8 +17,8 @@
 #'
 get_tab_5 <- function(file, dep_name = NULL){
   rag_label <- c(
-    "Menores de 1 año", "De 1 a 5 años", "De 6 a 14 años", "De 15 a 29 años",
-    "De 30 a 44 años", "De 45 a 64 años", "De 65 y más años")
+    "Menores de 1", "De 1 a 5", "De 6 a 14", "De 15 a 29",
+    "De 30 a 44", "De 45 a 64", "De 65 y mas")
 
   df <- readxl::read_excel(file,
                            sheet = 5,
@@ -29,7 +29,7 @@ get_tab_5 <- function(file, dep_name = NULL){
     purrr::set_names(c(
       "edad", "DNI",
       "Solo_tiene_partida_de_nacimiento",
-      "Solo_tiene_carne_de_extranjería",
+      "Solo_tiene_carne_de_extranjeria",
       "No_tiene_documento_alguno"
     )) |>
     janitor::clean_names() |>

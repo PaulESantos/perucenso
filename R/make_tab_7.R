@@ -26,12 +26,12 @@ get_tab_7 <- function(file, dep_name = NULL) {
       "residencia",
       "Hombres",
       "Mujeres",
-      "Menores de 1 año",
-      "1 a 14 años",
-      "15 a 29 años",
-      "30 a 44 años",
-      "45 a 64 años",
-      "65 y más años"
+      "Menores de 1",
+      "1 a 14",
+      "15 a 29",
+      "30 a 44",
+      "45 a 64",
+      "65 y mas"
     ) |> janitor::make_clean_names()) |>
     dplyr::mutate(departamento = dplyr::case_when(
       stringr::str_detect(residencia, "^DEP|^DPT") ~ residencia,
@@ -64,10 +64,6 @@ get_tab_7 <- function(file, dep_name = NULL) {
     dplyr::mutate(dplyr::across(
       .cols = c(varname, tipo),
       ~ stringr::str_to_sentence(.)
-    )) |>
-    dplyr::mutate(varname = stringr::str_replace(
-      varname,
-      "ano", "año"
     )) |>
     dplyr::mutate(dep_name = {{dep_name}}) |>
     dplyr::relocate(dep_name)

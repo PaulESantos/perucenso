@@ -14,6 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Mapa
 
 En el contexto del análisis demográfico y de salud pública, la comprensión de la distribución de la población con acceso a servicios de salud es importante. En este sentido, el presente tutorial tiene como objetivo principal generar un mapa interactivo que represente la distribución geográfica de la población con acceso al seguro de salud proporcionado por ESSALUD en el departamento del Cusco, Perú.
 

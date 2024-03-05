@@ -22,12 +22,12 @@ get_tab_2 <- function(file, dep_name = NULL){
                            col_names = FALSE) |>
     dplyr::select(-2) |>
     purrr::set_names(c("sexo",
-                       "Menores de 1 año",
-                       "1 a 14 años",
-                       "15 a 29 años",
-                       "30 a 44 años",
-                       "45 a 64 años",
-                       "65 y más años")) |>
+                       "Menores de 1",
+                       "1 a 14",
+                       "15 a 29",
+                       "30 a 44",
+                       "45 a 64",
+                       "65 y mas")) |>
     janitor::clean_names() |>
     dplyr::filter(!is.na(sexo)) |>
     dplyr::filter(!stringr::str_detect(sexo, "^Fuente|^1/")) |>

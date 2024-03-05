@@ -7,7 +7,7 @@
 get_tab_10(file, dep_name = NULL)
 }
 \arguments{
-\item{file}{Ruta del archivo Excel del Tomo II de los datos descargados desde la página del INEI
+\item{file}{Ruta del archivo Excel del Tomo II de los datos descargados desde la pagina del INEI
 (https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).}
 
 \item{dep_name}{Nombre del departamento al que pertenecen los datos.}
@@ -16,10 +16,10 @@ get_tab_10(file, dep_name = NULL)
 Un tibble con los datos ordenados en formato largo.
 }
 \description{
-Ordena los datos del Cuadro Nº 10 del Tomo II de los Resultados del Censo Nacional de 2017.
+Ordena los datos del Cuadro N 10 del Tomo II de los Resultados del Censo Nacional de 2017.
 
-Esta función permite organizar los datos del Cuadro Nº 10 del Tomo II de los
-Resultados del Censo Nacional de 2017, el cual tiene el siguiente título:
-"POBLACIÓN CENSADA, POR ALGUNA DIFICULTAD O LIMITACIÓN PERMANENTE, SEGÚN PROVINCIA,
-DISTRITO, ÁREA URBANA Y RURAL, SEXO Y GRUPOS DE EDAD".
+Esta funcion permite organizar los datos del Cuadro N 10 del Tomo II de los
+Resultados del Censo Nacional de 2017, el cual tiene el siguiente titulo:
+"POBLACION CENSADA, POR ALGUNA DIFICULTAD O LIMITACION PERMANENTE, SEGUN PROVINCIA,
+DISTRITO, AREA URBANA Y RURAL, SEXO Y GRUPOS DE EDAD".
 }

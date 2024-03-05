@@ -5,6 +5,8 @@ utils::globalVariables(c( ".data", "edad", "tag", "provincia", "distrito",
                           "menores_de_1_ano", "de_65_y_mas_anos",
                           "parentesco", "rango_etareo" , "doc_status",
                           "tipo", "hombres", "residencia", "varname",
-                          "x65_y_mas_anos", "var_1" , "vivienda", "limitacion"
+                          "x65_y_mas_anos", "var_1" , "vivienda", "limitacion",
+                          "primera_lengua", "nivel_educativo", "lengua_materna",
+                          "estado_civil", "nivel_educacion"
 
 ))
