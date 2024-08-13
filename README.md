@@ -1,5 +1,4 @@
 
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # perucenso
@@ -11,18 +10,10 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
-status](https://www.r-pkg.org/badges/version/perucenso.png)](https://CRAN.R-project.org/package=perucenso)
+status](https://www.r-pkg.org/badges/version/perucenso)](https://CRAN.R-project.org/package=perucenso)
 [![Codecov test
 coverage](https://codecov.io/gh/PaulESantos/perucenso/branch/master/graph/badge.svg)](https://app.codecov.io/gh/PaulESantos/perucenso?branch=master)
 <!-- badges: end -->
-
-> Este repositorio contiene la información del proyecto final del curso
-> de Análisis Geoespacial con R, Python e Inteligencia Artificial,
-> ofrecido por el Centro de Educación Continua de la Facultad de
-> Ingeniería Civil de la Universidad Nacional de Ingeniería.
-
-> El trabajo ha sido presentado por: Paul Efren Santos Andrade, Jose
-> Manuel Huillca Arredondo y Edison Mekias Barrios Sallo.
 
 ## Introducción
 
@@ -65,15 +56,15 @@ pak::pak("PaulESantos/perucenso")
 
 #### Nota
 
--   Es importante tener en cuenta que los datos se descargan desde la
-    plataforma del
-    [INEI](https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
-    Para generar las tablas ordenadas con la ayuda de `perucenso`, no es
-    necesario modificar la estructura de los archivos Excel descargados.
+- Es importante tener en cuenta que los datos se descargan desde la
+  plataforma del
+  [INEI](https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/).
+  Para generar las tablas ordenadas con la ayuda de `perucenso`, no es
+  necesario modificar la estructura de los archivos Excel descargados.
 
--   Las funciones que forman parte de `perucenso` actualmente están
-    enfocadas en el aspecto poblacional, y se accede a ellas mediante
-    `get_tab_1()`, `get_tab_2()`, …, `get_tab_10()`.
+- Las funciones que forman parte de `perucenso` actualmente están
+  enfocadas en el aspecto poblacional, y se accede a ellas mediante
+  `get_tab_1()`, `get_tab_2()`, …, `get_tab_10()`.
 
--   La función `get_tab_1_salud()` es la primera función para ordenar
-    los datos relacionados con el tema de salud.
+- La función `get_tab_1_salud()` es la primera función para ordenar los
+  datos relacionados con el tema de salud.
