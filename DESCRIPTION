@@ -6,13 +6,7 @@ Authors@R:
            family = "Santos Andrade",
            role = c("aut", "cre"),
            email = "paulefrens@gmail.com",
-           comment = c(ORCID = "0000-0002-6635-0375")),
-    person(given = "José Manuel",
-           family = "Huillca Arredondo",
-           role = "aut"),
-    person(given = "Edison Mekias",
-           family = "Barrios Sallo",
-           role = "aut"))
+           comment = c(ORCID = "0000-0002-6635-0375")))
 Description: Proporciona herramientas para cargar, limpiar, analizar y visualizar los datos del Censo Poblacional del Perú del año 2017. Incluye funciones para procesar información demográfica. El paquete `perucenso` facilita el acceso y la manipulación de los datos censales, permitiendo un análisis detallado de la composición demográfica en diferentes niveles geográficos.
 License: MIT + file LICENSE
 Suggests: 
@@ -31,7 +25,7 @@ Suggests:
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 URL: https://github.com/PaulESantos/perucenso/, https://paulesantos.github.io/perucenso/
 BugReports: https://github.com/PaulESantos/perucenso/issues
 Imports: 
