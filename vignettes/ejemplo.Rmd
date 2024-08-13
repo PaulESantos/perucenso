@@ -92,6 +92,8 @@ Podemos generar mapas para evaluar la variabilidad de los datos de manera espaci
 
 
 ```{r fig.width=5, fig.height=5}
+#| fig.alt: >
+#|  Mapa de Cusco
 library(geoperu)
 
 # Informacion espacial de cusco
@@ -124,6 +126,8 @@ Los datos para un  provincia especifica.
 
 
 ```{r fig.width=6, fig.height=3}
+#| fig.alt: >
+#|  Mapa de Anta
 anta <- peru |> 
   dplyr::filter(provincia == "ANTA")
 anta_df <- cusco |> 

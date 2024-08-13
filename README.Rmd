@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 # perucenso
-## <a href='https://github.com/PaulESantos/perucenso'><img src='man/figures/censo_2017.jpg' align="right" height="320" width="230" /></a>
+## <a href='https://github.com/PaulESantos/perucenso'><img src='man/figures/censo_2017.jpg' align="right" height="320" width="230"  alt="Censo 2017" /></a>
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/perucenso)](https://CRAN.R-project.org/package=perucenso)

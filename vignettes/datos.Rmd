@@ -64,12 +64,12 @@ Aquí está la nueva tabla con las columnas solicitadas:
 
 Los datos son presentados a través de la plataforma oficial del Instituto Nacional de Estadística e Informática [INEI](https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/). En esta plataforma, se pueden encontrar los resultados definitivos del censo, ordenados para cada uno de lso departamentos, presentando un documento en formato pdf y un archivo en formato excel con los datos. Los usuarios pueden explorar y descargar estos datos para su análisis y uso posterior.
 
-![](images/res_def.png)
+![INEI website](images/res_def.png)
 
 Los datos se encuentran disponibles en formato Excel editable, con aproximadamente 15 documentos Excel para cada uno de los departamentos. Cada uno de estos archivos Excel contiene múltiples páginas, las cuales albergan la información correspondiente a diversos aspectos considerados en el censo. La estructura de los datos sigue el siguiente formato:
 
 
-![](images/tab_3.png)
+![xlsx file](images/tab_3.png)
 
 
 El proceso de ordenamiento de los datos presentados en estas tablas conlleva numerosas complicaciones que dificultan su análisis. Entre las dificultades destacadas se encuentra el agrupamiento repetitivo de las diferentes escalas de evaluación.

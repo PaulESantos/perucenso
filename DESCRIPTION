@@ -10,7 +10,6 @@ Authors@R:
 Description: Proporciona herramientas para cargar, limpiar, analizar y visualizar los datos del Censo Poblacional del Perú del año 2017. Incluye funciones para procesar información demográfica. El paquete `perucenso` facilita el acceso y la manipulación de los datos censales, permitiendo un análisis detallado de la composición demográfica en diferentes niveles geográficos.
 License: MIT + file LICENSE
 Suggests: 
-    altdoc,
     geoperu,
     ggplot2,
     httr,

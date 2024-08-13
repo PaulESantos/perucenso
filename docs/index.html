@@ -55,7 +55,41 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><p>Hello World!</p>
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header"><h1 id="perucenso">perucenso<a class="anchor" aria-label="anchor" href="#perucenso"></a>
+</h1></div>
+<div class="section level2">
+<h2 id="section">
+<a href="https://github.com/PaulESantos/perucenso" class="external-link"><img src="reference/figures/censo_2017.jpg" align="right" height="320" width="230" alt="Censo 2017"></a><a class="anchor" aria-label="anchor" href="#section"></a>
+</h2>
+<!-- badges: start -->
+
+</div>
+<div class="section level2">
+<h2 id="introducción">Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"></a>
+</h2>
+<p>El paquete <code>perucenso</code> proporciona herramientas para el procesamiento y análisis de los datos del <code>Censo Poblacional del Perú del año 2017</code>, realizado por el Instituto Nacional de Estadística e Informática (INEI). Este censo, recopiló información detallada sobre la población, viviendas y comunidades indígenas en todo el país.</p>
+<p>El INEI desplegó una monumental labor al ejecutar los Censos Nacionales 2017 en el Perú, con el propósito de recopilar datos actualizados y detallados sobre la población, las viviendas y las comunidades indígenas. En el marco de su política de difusión, el INEI presenta los <code>Resultados Definitivos del departamento de Cusco</code>, un compendio extenso y valioso que ofrece información relevante para instituciones públicas y privadas, investigadores, estudiantes y el público en general.</p>
+<p>El documento consta de quince tomos, abordando aspectos generales del departamento, análisis de resultados, datos sobre población, vivienda y hogar. Este esfuerzo estadístico ha sido posible gracias al apoyo de diversas entidades y a la dedicación del personal del INEI.</p>
+<p>Con el objetivo de facilitar el acceso y la manipulación de estos datos para todos los departamentos del Perú, surge el paquete <code>perucenso</code>. Aunque los datos utilizados inicialmente pertenecen al departamento de Cusco, los códigos generados por este paquete serán aplicables a nivel nacional, permitiendo un análisis más amplio y detallado de la información censal. Este paquete busca ser una herramienta fundamental para aquellos interesados en explorar y comprender la dinámica demográfica y social del Perú.</p>
+</div>
+<div class="section level2">
+<h2 id="instalación">Instalación<a class="anchor" aria-label="anchor" href="#instalaci%C3%B3n"></a>
+</h2>
+<p>Puedes instalar la versión de desarrollo de <code>perucenso</code> desde GitHub puedes usar la siguinte función:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"PaulESantos/perucenso"</span><span class="op">)</span></span></code></pre></div>
+<div class="section level4">
+<h4 id="nota">Nota<a class="anchor" aria-label="anchor" href="#nota"></a>
+</h4>
+<ul>
+<li><p>Es importante tener en cuenta que los datos se descargan desde la plataforma del <a href="https://censo2017.inei.gob.pe/resultados-definitivos-de-los-censos-nacionales-2017/" class="external-link">INEI</a>. Para generar las tablas ordenadas con la ayuda de <code>perucenso</code>, no es necesario modificar la estructura de los archivos Excel descargados.</p></li>
+<li><p>Las funciones que forman parte de <code>perucenso</code> actualmente están enfocadas en el aspecto poblacional, y se accede a ellas mediante <code><a href="reference/get_tab_1.html">get_tab_1()</a></code>, <code><a href="reference/get_tab_2.html">get_tab_2()</a></code>, …, <code><a href="reference/get_tab_10.html">get_tab_10()</a></code>.</p></li>
+<li><p>La función <code><a href="reference/get_tab_1_salud.html">get_tab_1_salud()</a></code> es la primera función para ordenar los datos relacionados con el tema de salud.</p></li>
+</ul>
+</div>
+</div>
+</div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
@@ -87,7 +121,14 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://CRAN.R-project.org/package=perucenso" class="external-link"><img src="https://www.r-pkg.org/badges/version/perucenso" alt="CRAN status"></a></li>
+<li><a href="https://app.codecov.io/gh/PaulESantos/perucenso?branch=master" class="external-link"><img src="https://codecov.io/gh/PaulESantos/perucenso/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
