@@ -16,14 +16,6 @@ status](https://www.r-pkg.org/badges/version/perucenso.png)](https://CRAN.R-proj
 coverage](https://codecov.io/gh/PaulESantos/perucenso/branch/master/graph/badge.svg)](https://app.codecov.io/gh/PaulESantos/perucenso?branch=master)
 <!-- badges: end -->
 
-> Este repositorio contiene la información del proyecto final del curso
-> de Análisis Geoespacial con R, Python e Inteligencia Artificial,
-> ofrecido por el Centro de Educación Continua de la Facultad de
-> Ingeniería Civil de la Universidad Nacional de Ingeniería.
-
-> El trabajo ha sido presentado por: Paul Efren Santos Andrade, Jose
-> Manuel Huillca Arredondo y Edison Mekias Barrios Sallo.
-
 ## Introducción
 
 El paquete `perucenso` proporciona herramientas para el procesamiento y

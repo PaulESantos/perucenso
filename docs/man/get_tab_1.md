@@ -19,7 +19,7 @@ PROVINCIA, DISTRITO Y EDADES SIMPLES"
 <table>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="get_tab_1_:_file">file</code>
+<code id="file">file</code>
 </td>
 <td>
 Ruta del archivo Excel del Tomo I de los datos descargados desde la
@@ -29,7 +29,7 @@ página del INEI
 </tr>
 <tr>
 <td style="white-space: nowrap; font-family: monospace; vertical-align: top">
-<code id="get_tab_1_:_dep_name">dep_name</code>
+<code id="dep_name">dep_name</code>
 </td>
 <td>
 Nombre del departamento al que pertenecen los datos.
