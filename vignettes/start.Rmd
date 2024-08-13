@@ -2,7 +2,7 @@
 title: "Antecedentes"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Antecedentes:}
+  %\VignetteIndexEntry{Antecedentes}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

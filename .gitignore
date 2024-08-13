@@ -6,3 +6,6 @@
 
 altdoc/freeze.rds
 inst/doc
+_quarto/*
+!_quarto/_freeze/
+docs
