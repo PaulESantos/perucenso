@@ -93,13 +93,14 @@ Podemos generar mapas para evaluar la variabilidad de los datos de manera espaci
 
 ```{r fig.width=5, fig.height=5}
 library(geoperu)
-peru <- geoperu::distritos_peru |> 
-  sf::st_as_sf()
+
 # Informacion espacial de cusco
-sf_cusco <- peru |> 
-  dplyr::filter(departamento == "CUSCO") |> 
+sf_cusco <- geoperu::get_geo_peru("cusco", 
+                                  level = "dep",
+                                  simplified = FALSE
+                                  ) |> 
   dplyr::group_by(provincia) |> 
-  dplyr::summarise(geometry = sf::st_union(geometry))
+  dplyr::summarise(geometry = sf::st_union(geom))
 
 # Informacion del censo
 prov_cusco <- cusco |> 
