@@ -1,8 +1,31 @@
 url: https://paulesantos.github.io/perucenso/
+
+home:
+  title: Arrange data from Peru's censo 2017
+
+authors:
+  Paul Efren Santos Andrade:
+    href: https://paulefrensa.rbind.io/
+
 template:
   bootstrap: 5
+  light-switch: true
   bslib:
+    primary: "#0054AD"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+    danger: "#A6081A"
     base_font: {google: "Roboto"}
     heading_font: {google: "Roboto Slab"}
     code_font: {google: "JetBrains Mono"}
-
+development:
+  mode: auto
+articles:
+- title: perucenso
+  navbar: ~
+  contents:
+  - start
+  - prob
+  - datos
+  - ejemplo
+  - interactivo

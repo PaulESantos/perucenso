@@ -115,4 +115,4 @@ leaflet::leaflet(tomo_dos_sf) |>
 ```
 La siguiente imagen es estática. Para visualizar el mapa dinámico, por favor, copie el código y ejecútelo en su dispositivo local.
 
-![leaflet map](images/leaflet_plot.png)
+![leaflet Map](leaflet_plot.png)

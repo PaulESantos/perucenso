@@ -69,7 +69,7 @@ Los datos son presentados a través de la plataforma oficial del Instituto Nacio
 Los datos se encuentran disponibles en formato Excel editable, con aproximadamente 15 documentos Excel para cada uno de los departamentos. Cada uno de estos archivos Excel contiene múltiples páginas, las cuales albergan la información correspondiente a diversos aspectos considerados en el censo. La estructura de los datos sigue el siguiente formato:
 
 
-![xlsx file](images/tab_3.png)
+![xlsx file](tab_3.png)
 
 
 El proceso de ordenamiento de los datos presentados en estas tablas conlleva numerosas complicaciones que dificultan su análisis. Entre las dificultades destacadas se encuentra el agrupamiento repetitivo de las diferentes escalas de evaluación.
@@ -84,7 +84,7 @@ La organización final de los datos se ajustará a los principios de datos orden
 
 > 3. **Cada unidad de observación ocupa una celda **: El conjunto de datos se estructurará de manera que cada tipo distinto de observación se almacene en su propia tabla, simplificando el proceso de extracción de información relevante.
 
-![by @allison_horst](images/tidydata.jpg){ width=80% }
+![by @allison_horst](tidydata.jpg){ width=80% }
 
 
 
