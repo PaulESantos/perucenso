@@ -1,29 +1,26 @@
 url: https://paulesantos.github.io/perucenso/
-home:
-  title: Arrange data from Peru's censo 2017
 authors:
   Paul Efren Santos Andrade:
     href: https://paulefrensa.rbind.io/
+
 template:
   bootstrap: 5
-  light-switch: true
   bslib:
-    primary: "#0054AD"
-    border-radius: 0.5rem
-    btn-border-radius: 0.25rem
-    danger: "#A6081A"
-    base_font: {google: "Roboto"}
-    heading_font: {google: "Roboto Slab"}
-    code_font: {google: "JetBrains Mono"}
-development:
-  mode: auto
-articles:
-- title: perucenso
-  navbar: ~
-  contents:
-  - start
-  - prob
-  - datos
-  - ejemplo
-  - interactivo
-
+    font_scale: 1.0
+    base_font:
+      google: "Jost"
+    code_font:
+      google: "Overpass Mono"
+    heading_font:
+      google: "Abhaya Libre"
+    bg: "#fcfbf9"         # lighten springwood background
+    fg: "#231F20"         # contrast ratio: 15.76 for text
+    primary: "#272b30"    # dark blue active text
+    secondary: "#BED4E2"  # blue active pill background
+    link-color: "#437597" # brighter link color, contrast 4.52
+    info: "#BED4E2"       # version badge bg
+    headings-color: "#336688"
+    # navbar
+    navbar-bg: "#fcfbf9"  # match to site bg
+    navbar-light-color: "#272b30"
+    navbar-light-hover-color: "#336688"
