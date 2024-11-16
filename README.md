@@ -13,6 +13,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://www.r-pkg.org/badges/version/perucenso)](https://CRAN.R-project.org/package=perucenso)
 [![Codecov test
 coverage](https://codecov.io/gh/PaulESantos/perucenso/branch/master/graph/badge.svg)](https://app.codecov.io/gh/PaulESantos/perucenso?branch=master)
+[![R-CMD-check](https://github.com/PaulESantos/perucenso/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PaulESantos/perucenso/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/PaulESantos/perucenso/graph/badge.svg)](https://app.codecov.io/gh/PaulESantos/perucenso)
 <!-- badges: end -->
 
 ## Introducción

@@ -1,5 +1,4 @@
 url: https://paulesantos.github.io/perucenso/
-
 authors:
   Paul Efren Santos Andrade:
     href: https://paulefrensa.rbind.io/
@@ -25,3 +24,5 @@ template:
     navbar-bg: "#fcfbf9"  # match to site bg
     navbar-light-color: "#272b30"
     navbar-light-hover-color: "#336688"
+development:
+  mode: auto
