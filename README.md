@@ -7,8 +7,6 @@
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/perucenso)](https://CRAN.R-project.org/package=perucenso)
 [![Codecov test
@@ -16,6 +14,8 @@ coverage](https://codecov.io/gh/PaulESantos/perucenso/branch/master/graph/badge.
 [![R-CMD-check](https://github.com/PaulESantos/perucenso/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/PaulESantos/perucenso/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/PaulESantos/perucenso/graph/badge.svg)](https://app.codecov.io/gh/PaulESantos/perucenso)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 <!-- badges: end -->
 
 ## Introducción
